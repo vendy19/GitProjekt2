@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace GitProjekt2
 {
@@ -6,7 +10,14 @@ namespace GitProjekt2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Osoba osoba = new Osoba();
+            osoba.Jmeno = "Zdenek";
+            osoba.Prijmeni = "Jendřejčík";
+            osoba.DatumNarozeni = DateTime.Parse("26.01.2003");
+
+            Console.WriteLine(osoba.GetVek());
+
+            Console.ReadKey();
         }
     }
 }
